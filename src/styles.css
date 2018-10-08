@@ -1,5 +1,34 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+/* ----------------------------------- \
+        Application-wide styles
+\------------------------------------ */
+h1{
+  font-family: 'Century Gothic', Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body{
+  margin: 0;
+  color: #B2AED0 !important;
+  background-color: rgba(16, 10, 40, 1) !important;
+  
+  font-family: 'Century Gothic', Georgia;
+}
 
+/* ----------------------------------- \
+      Everywhere else
+\------------------------------------ */ 
+*{
+  margin: 0;
+  font-family: 'Century Gothic', Helvetica, sans-serif
+}
+
+/* --------------------------------------------\
+              THEME COLORS
+\-------------------------------------------- */
 
 /*
 rgba(132, 55, 167, 1)
@@ -51,3 +80,5 @@ rgba(22, 20, 63, 1)
 .blue {
   background-color: rgba(22, 20, 63, 1) !important;
 }
+
+
