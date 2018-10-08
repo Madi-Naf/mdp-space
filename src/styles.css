@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+/*
+rgba(132, 55, 167, 1)
+rgba(179, 119, 215, 1)
+rgba(70, 31, 114, 1)
+rgba(16, 10, 40, 1)
+rgba(22, 20, 63, 1)
+*/
+.bg-gradient {
+  background: linear-gradient(90deg, rgba(70, 31, 114, 1) 0%, rgba(22, 20, 63, 1) 50%, rgba(16, 10, 40, 1) 100%) !important;
+}
+
+.bg-pink {
+  background-color: rgba(132, 55, 167, 1) !important;
+}
+
+.pink {
+  color: rgba(132, 55, 167, 1) !important;
+}
+
+.bg-lightpink {
+  background-color: rgba(179, 119, 215, 1) !important;
+}
+
+.lightpink {
+  background-color: rgba(179, 119, 215, 1) !important;
+}
+
+.bg-purple {
+  background-color: rgba(70, 31, 114, 1) !important;
+}
+
+.purple {
+  background-color: rgba(70, 31, 114, 1) !important;
+}
+
+.bg-darkblue {
+  background-color: rgba(16, 10, 40, 1) !important;
+}
+
+.darkblue {
+  background-color: rgba(16, 10, 40, 1) !important;
+}
+
+.bg-blue {
+  background-color: rgba(22, 20, 63, 1) !important;
+}
+
+.blue {
+  background-color: rgba(22, 20, 63, 1) !important;
+}
