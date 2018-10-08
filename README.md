@@ -1,27 +1,16 @@
-# MdpSpace
+# mdpSpace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+`mdpSpace` est le nom de notre projet 2 à la [wilde code school](https://odyssey.wildcodeschool.fr/)
 
-## Development server
+## Pourquoi mdpSpace ?
+    Dans ce projet nous somme une épuipe de 3 `wilders` (étudiants de la wild),
+    donc pour le `MDP` vous l'aurait compris ce sont tout simplement nos initiales.
+    Et le `space` quant à lui correspond au theme du projet,
+    qui est de crées un site web sur les Asteroid à partir de l'[API de la NASA](https://api.nasa.gov/index.html)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Tester le Projet en local
+pour tester le projet en local, vous pouvez cloner le repo et taper la commande:
+```console
+    wcs@wilder⚡ ng serveng serve --open
+```
+sur votre terminal et aller sur le lien suivant : `http://localhost:4200/`. 
