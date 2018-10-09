@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   getFormsDate(): void {
-    this.formsDate = `<app-forms-date></app-forms-date>`;
+    this.formsDate = `forms-date`;
   }
 
 }

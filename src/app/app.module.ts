@@ -6,11 +6,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-<<<<<<< HEAD
 import { FormsDateComponent } from './components/forms-date/forms-date.component';
-=======
 import { FooterComponent } from './footer/footer.component';
->>>>>>> developement
+
 
 const routes: Routes = [
   { path: 'Home', component: HomeComponent},
@@ -22,11 +20,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
-<<<<<<< HEAD
-    FormsDateComponent
-=======
+    FormsDateComponent,
     FooterComponent
->>>>>>> developement
   ],
   imports: [
     BrowserModule,
