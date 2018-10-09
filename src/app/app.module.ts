@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { FormsDateComponent } from './components/forms-date/forms-date.component';
 
 const routes: Routes = [
   { path: 'Home', component: HomeComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
     AppComponent,
     ContactComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    FormsDateComponent
   ],
   imports: [
     BrowserModule,

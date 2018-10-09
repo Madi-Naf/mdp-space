@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public greatUser:string = "Welcome to mdpSpace"
-  constructor() { }
+  public greatUser:string = "Welcome to mdpSpace";
+  public formsDate:string;
+  constructor() { 
+
+  }
 
   ngOnInit() {
+  }
+
+  getFormsDate(): void {
+    this.formsDate = `<app-forms-date></app-forms-date>`;
   }
 
 }
