@@ -12,20 +12,23 @@
 </header>
 
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     <p class="description col-9">
       We are not aware but on these last 24 hours, nb_dAsteroide have to rub the earth.
       Do not panic our planet is not in danger because here we speak about 50 million km.
       click on the button above to know the number of Asteroids who visited us.
     </p>
   </div>
-  <div class="row">
-      <div class="col-9">
-          <button class="btn btn-lg bg-purple text-white btn-block mt-5"
+  <div class="row justify-content-center">
+      <div class="col-6">
+          <button id="vewmore" class="btn btn-lg bg-purple text-white btn-block mt-5  mb-5 {{hiddeenClass}}"
                   (click)="getFormsDate()">
                   Click here
           </button>
       </div>
   </div>
 </div>
-<app- {{formsDate}}> </app- {{formsDate}}>
+
+<div *ngIf="formsDate" class="mb-5">
+  <app-forms-date ></app-forms-date>
+</div>
