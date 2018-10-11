@@ -4,7 +4,7 @@
 .jumbotron{
     background-image: linear-gradient(90deg, rgba(66,47,92,0.85) 20%, rgba(26,47,93,0.2) 51%, rgba(1,13,36,0.85) 100%),
                       url(https://images.wallpaperscraft.com/image/earth_moon_space_galaxy_118437_3840x2160.jpg); 
-    background-repeat: no-repea;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -21,7 +21,7 @@
 }
 .title{
     font-family: 'Nasalization', arial !important;
-    font-size: 5em;
+    font-size: 5rem;
 
     color: #B2AED0;
 }

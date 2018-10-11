@@ -11,9 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent},
+  { path: '', component: HomeComponent}
 ]
-
 
 @NgModule({
   declarations: [
