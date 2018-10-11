@@ -1,4 +1,12 @@
 /* --------------------------------------------\
+                     RESET
+\-------------------------------------------- */
+
+* {
+    margin: 0;
+}
+
+/* --------------------------------------------\
                      HEADER
 \-------------------------------------------- */
 .jumbotron{
@@ -8,13 +16,11 @@
     background-size: cover;
     background-position: center;
 
-    padding: 20em;
+    padding: 0;
     border-radius: 0;
 }
 
-.input-date{
-    margin-top: 15em;
-}
+
 @font-face{
     font-family: 'Nasalization';
     src: url('nasalization-rg.ttf');
@@ -30,7 +36,6 @@
 \-------------------------------------------- */
 .description{
     font-size: 1.5em;
-    margin-top: 10em;
 }
 /* --------------------------------------------\
                 FORMS DATE
@@ -38,3 +43,4 @@
 .visibility-hidden{
     visibility: hidden;
 }
+
