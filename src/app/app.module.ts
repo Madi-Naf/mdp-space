@@ -8,10 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormsDateComponent } from './components/forms-date/forms-date.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent}
+  { path: 'Home', component: HomeComponent},
+  { path: 'Contact', component: ContactComponent}
 ]
 
 @NgModule({
@@ -19,8 +21,12 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    FormsDateComponent,
-    FooterComponent
+
+    FooterComponent,
+    ContactComponent,
+    FormsDateComponent   
+    
+
   ],
   imports: [
     BrowserModule,
