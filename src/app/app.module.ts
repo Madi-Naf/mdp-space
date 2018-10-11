@@ -12,9 +12,9 @@ import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'Contact', component: ContactComponent}
-]
+] 
 
 @NgModule({
   declarations: [
