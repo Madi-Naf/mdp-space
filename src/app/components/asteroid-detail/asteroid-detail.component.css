@@ -1,0 +1,15 @@
+.img-circle-card{
+	border-radius: 50%;
+	width: 25%;
+}
+
+.content-center{
+
+	display: flex;
+	justify-content: center;	
+}
+
+.feature{
+	font-size: 1.5em;	
+}
+/* Sphere */

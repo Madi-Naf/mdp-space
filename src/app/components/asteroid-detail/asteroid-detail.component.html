@@ -1,3 +1,50 @@
-<p>
-  asteroid-detail works!
-</p>
+
+<div class="container content-center">
+  <div class="row mt-5">
+    <div class="col-12 content-center">
+      <div class="card container" style="width: 40rem; ">
+        <div class="row">
+          <div class="col-8">
+            <img class="img-circle-card" 
+            src="https://i.postimg.cc/mr7nBwp2/rp5_INUg-asteroid-wallpaper.jpg">
+          </div>
+          <div class="2">
+            <h2>id : {{idIs.id }}</h2>
+          </div>
+          
+        </div>
+      
+
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item feature">Name : {{asteroInfo.name}} </li>
+            <li class="list-group-item feature">Hazardous : {{asteroInfo.hazardous}} </li>
+
+            <li class="list-group-item feature">
+              <h5> Estimated dimaeter min : {{asteroInfo.minMeters}} m</h5>
+              <h5> Estimated dimaeter max : {{asteroInfo.maxMeters}} m</h5>
+            </li>
+            <li class="list-group-item feature">
+              <h5> Estimated dimaeter min : {{asteroInfo.minKm}} km</h5>
+              <h5> Estimated dimaeter max : {{asteroInfo.maxKm}} km</h5>
+            </li>
+            <li class="list-group-item feature">
+              <h5> Estimated dimaeter min : {{asteroInfo.minMiles}} miles</h5>
+              <h5> Estimated dimaeter max : {{asteroInfo.maxMiles}} miles</h5>
+            </li>
+
+            <li class="list-group-item feature">
+                <h5> Relative velocity  : </h5>
+                <p> {{asteroInfo.velocityKmh}}  Km/h </p>
+                <p> {{asteroInfo.velocityKms}}  Km/s <p>
+                <p> {{asteroInfo.velocityMilesh}}  miles/h  <p>
+            </li>
+            <li class="list-group-item feature">etc : value</li>
+            <li class="list-group-item feature">etc : value </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> 

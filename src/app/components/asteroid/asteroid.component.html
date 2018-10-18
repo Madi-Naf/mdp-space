@@ -1,3 +1,36 @@
-<p>
-  asteroid works!
-</p>
+<div *ngIf = "!card">
+	<!-- My NASA API TEST -->
+	<div  class="container mt-5 ">
+	  <div class="row">
+		  <ul class="list-group mt-10 col-5">
+			  <li class="list-group-item">nb Element : {{allAsteroid.nbAstero}} </li>
+			</ul>
+	  </div>
+	</div> 
+  
+	<!--  all Asteroid id  -->
+	<div class="container text-white">
+	  <div class="row">
+		  <div  *ngFor="let currentAstero of allAsteroid.idAstero"
+				class="col-3  mt-5">
+			<section class="stage">
+				<figure class="ball">
+					<span class="shadow"></span>
+					<span class="iris"></span>
+				</figure>
+			</section>
+			  <button (click) = getCard(currentAstero)
+				  class="btn btn-info" target="_blank"> id: {{ currentAstero}} 
+			  </button>
+		  </div>
+	  </div>
+	</div>
+  </div> 
+  
+  <!-- Atseroid Identity test -->
+  <div *ngIf="card" class="container bg-sky-stars content-center">
+	<div class="row">
+	  <asteroid-detail [idIs] = "oneId">
+	  </asteroid-detail>
+	</div>
+  </div> 

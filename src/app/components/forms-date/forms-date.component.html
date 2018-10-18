@@ -1,4 +1,5 @@
- <div class="container input-date">
+ <div *ngIf=" !seeAsteroid"
+    class="container input-date">
     <div class="row justify-content-center">
       <div class="col-10">
         <form class="form-signin">
@@ -12,8 +13,17 @@
             <input type="password" id="endDate" class="form-control" placeholder="yyyy-mm-dd"
                     data-toggle="tooltip" data-placement="top" title="EX: 2018-09-08">
 
-            <button id="submit" class="btn btn-lg bg-purple text-white btn-block mt-5" type="submit">Submit</button>
+            <button id="submit" (click)="canSeeAsteroid()"
+                class="btn btn-lg bg-purple text-white btn-block mt-5" type="submit">
+                Submit
+            </button>
         </form>
       </div>
     </div>
+  </div> 
+
+  <div *ngIf="seeAsteroid" class="container">
+      <div class="row">
+        <app-asteroid></app-asteroid>
+      </div>
   </div>

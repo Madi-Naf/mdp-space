@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsDateComponent implements OnInit {
 
+  private seeAsteroid: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
-
-}
+  public canSeeAsteroid(): boolean{
+    return this.seeAsteroid = true;
+  }
+} 
