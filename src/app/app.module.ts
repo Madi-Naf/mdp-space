@@ -1,7 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule,Routes,Router} from '@angular/router';
+// importation du module Router
+import { RouterModule,Routes} from '@angular/router';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+// importation du http client Modulr
+import { HttpClientModule } from '@angular/common/http';
+// importation du form Module
+import { FormsModule } from '@angular/forms'
+
+import { AsteroidService } from './services/asteroid.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -34,10 +41,13 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
     RouterModule.forRoot(routes),
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [AsteroidService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
