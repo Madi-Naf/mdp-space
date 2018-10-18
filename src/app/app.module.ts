@@ -4,11 +4,13 @@ import { RouterModule,Routes,Router} from '@angular/router';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { FormsDateComponent } from './components/forms-date/forms-date.component';
-import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AsteroidComponent } from './components/asteroid/asteroid.component';
+import { AsteroidDetailComponent } from './components/asteroid-detail/asteroid-detail.component';
 
 
 const routes: Routes = [
@@ -24,7 +26,9 @@ const routes: Routes = [
 
     FooterComponent,
     ContactComponent,
-    FormsDateComponent   
+    FormsDateComponent,
+    AsteroidComponent,
+    AsteroidDetailComponent   
     
 
   ],

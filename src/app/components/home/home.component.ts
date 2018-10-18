@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsDateComponent } from '../components/forms-date/forms-date.component';
+import { FormsDateComponent } from '../forms-date/forms-date.component';
 
 @Component({
   selector: 'app-home',
