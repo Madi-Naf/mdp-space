@@ -105,6 +105,8 @@ public getAllAsteroidDay(start:string, end:string): Observable<AllIds> {
 					info.maxMiles =
 					data.estimated_diameter["miles"]["estimated_diameter_max"];
 
+					info.deltaDistanceKm = data.close_approach_data[0]['miss_distance']['kilometers'];
+
 					//Comme pour chaque date de passage il y'a une vitesse, je prends le nombre de fois de passage
 					info.approchTime = data.close_approach_data.length;
 					let indexDate = 0;
