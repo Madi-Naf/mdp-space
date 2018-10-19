@@ -11,7 +11,7 @@
 	<!--  all Asteroid id  -->
 	<div class="container text-white">
 	  <div class="row">
-		  <div  *ngFor="let currentAstero of allAsteroid.idAstero"
+		  <div  *ngFor="let currentAstero of allAsteroid.asteroName"
 				class="col-3  mt-5">
 			<section class="stage">
 				<figure class="ball">
@@ -20,7 +20,7 @@
 				</figure>
 			</section>
 			  <button (click) = getCard(currentAstero)
-				  class="btn btn-info" target="_blank"> id: {{ currentAstero}} 
+				  class="btn btn-info" target="_blank"> Asteroid Name: {{ currentAstero}} 
 			  </button>
 		  </div>
 	  </div>
