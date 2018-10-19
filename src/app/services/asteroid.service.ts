@@ -19,7 +19,24 @@ export class AsteroidService {
 
 	//   private apiUrl: string = `${API_URL}start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY }`;
 	private selfUrl: string = `${SELF_URL}${selfId}?api_key=${API_KEY}`;
+//  Get all Asteroid of the day 
+public getAllAsteroidDay(start:string, end:string): Observable<AllIds> { 
 
+	let apiUrlDay: string = `${API_URL}
+			start_date=2018-10-19&end_date=2018-10-19&api_key=${API_KEY }`;
+
+	return this.serviceHttp.get(apiUrlDay).pipe(
+		map(
+		(data: any) =>{
+			let astero: AllIds = new AllIds();   
+			astero.nbAstero = data.element_count ;
+		
+			return astero;
+		
+		})
+	)
+}
+//  Get all Asteroid id and name
 	public getAllAsteroid(start:string, end:string): Observable<AllIds> { 
 
 		let apiUrl: string = `${API_URL}
@@ -42,7 +59,7 @@ export class AsteroidService {
 					idTab[i] = data.near_earth_objects['2018-09-11'][i].id; 
 				}
 				astero.asteroName = nameTab;
-
+				astero.idAstero = idTab;
 				return astero;
 			}
 			)
