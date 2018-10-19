@@ -2,10 +2,12 @@
 export interface AllAsteroid{
     nbAstero: number;
     idAstero: number[];
+    asteroName: string[];
 }
 export class AllIds implements AllAsteroid {
     nbAstero: number;
     idAstero: number[];
+    asteroName: string[];
 }
 // ===================  ASTEROID ID  =============================
 export interface AsteroidId{

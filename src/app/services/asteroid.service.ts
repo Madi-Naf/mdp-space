@@ -22,29 +22,31 @@ export class AsteroidService {
 
 	public getAllAsteroid(start:string, end:string): Observable<AllIds> { 
 
-	let apiUrl: string = `${API_URL}
-			start_date=${start}
-			&end_date=${end}
-			&api_key=${API_KEY }`;
+		let apiUrl: string = `${API_URL}
+				start_date=${start}
+				&end_date=${end}
+				&api_key=${API_KEY }`;
 
-	return this.serviceHttp.get(apiUrl).pipe(
-		map(
-		(data: any) =>{
-			let astero: AllIds = new AllIds();   
-			astero.nbAstero = data.element_count ;
-	
-			// Recuperation des ID
-			let idTab= [];
-			for(let i = 0; i < 12; i += 1){
+		return this.serviceHttp.get(apiUrl).pipe(
+			map(
+			(data: any) =>{
+				let astero: AllIds = new AllIds();   
+				astero.nbAstero = data.element_count ;
+		
+				// Recuperation des ID
+				let idTab = [];
+				let nameTab = [];
 
-				idTab[i] = data.near_earth_objects['2018-09-11'][i].id; 
+				for(let i = 0; i < 12; i += 1){
+					nameTab[i] = data.near_earth_objects['2018-09-11'][i].id; 
+					idTab[i] = data.near_earth_objects['2018-09-11'][i].name; 
+				}
+				astero.asteroName = nameTab;
+
+				return astero;
 			}
-			astero.idAstero = idTab;
-
-			return astero;
-		}
+			)
 		)
-	)
 	}
 
 	public getId():Observable<MyId> {
