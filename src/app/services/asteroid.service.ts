@@ -38,8 +38,8 @@ export class AsteroidService {
 				let nameTab = [];
 
 				for(let i = 0; i < 12; i += 1){
-					nameTab[i] = data.near_earth_objects['2018-09-11'][i].id; 
-					idTab[i] = data.near_earth_objects['2018-09-11'][i].name; 
+					nameTab[i] = data.near_earth_objects['2018-09-11'][i].name; 
+					idTab[i] = data.near_earth_objects['2018-09-11'][i].id; 
 				}
 				astero.asteroName = nameTab;
 
