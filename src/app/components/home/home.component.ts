@@ -21,12 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-  // All Asteroid List
-      this.param_service.getAllAsteroidDay(startDate, endDate).subscribe(
-          ( info: AllIds) => {
-              this.allAsteroid = info;
-          }
-      ); 
+  
   }
 
   getFormsDate(): void {
