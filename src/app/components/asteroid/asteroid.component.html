@@ -12,9 +12,10 @@
     </div>
   </div>
 
-  <!--  all Asteroid id  -->
+  <!--  Affichage des résultats  -->
   <div class="container text-white">
     <div class="row">
+      <!-- Pour chaque item du tableau arrayInfos -->
       <div *ngFor="let item of arrayInfos; let i=index" class="col-3  mt-5">
         <section class="stage">
           <figure class="ball">
@@ -22,17 +23,17 @@
             <span class="iris"></span>
           </figure>
         </section>
-        <button (click)=getCard(item) class="btn btn-info" target="_blank"> Asteroid Name:
+        <button (click)=getCard(item) class="btn btn-info" target="_blank"> {{ item.name }}
         </button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Atseroid Identity test -->
+<!-- Si card vaut true, on affiche les détails -->
 <div *ngIf="card" class="container bg-sky-stars content-center">
   <div class="row">
-<!--     <asteroid-detail [startDate]=startDate [endDate]=endDate [link]="item.link" #detailsBinding>
-    </asteroid-detail> -->
+    <!-- Composant AsteroidDetailComponent -->
+<asteroid-detail [startDate]=startDate [endDate]=endDate [link]="item.link" #detailsBinding></asteroid-detail>
   </div>
 </div>
