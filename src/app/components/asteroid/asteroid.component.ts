@@ -19,6 +19,8 @@ export class AsteroidComponent implements OnInit {
     // Récupération des dates transmises par l'élément parent FormsDateComponent
     @Input() startDate: string;
     @Input() endDate: string;  
+
+    public shareLink: string;
   
     constructor(private param_service: AsteroidService) { }
 
@@ -61,8 +63,11 @@ export class AsteroidComponent implements OnInit {
 
     }
     // Méthode qui passe la propriété card à true, pour afficher les détails
-    public getCard(id): boolean {
-    return this.card = true;
+    public getCard(link): boolean {
+        this.shareLink = link;
+        console.log(this.shareLink);
+        
+        return this.card = true;
     }
 
 }
