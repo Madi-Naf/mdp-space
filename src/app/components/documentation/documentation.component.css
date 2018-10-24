@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'Nasalization';
+    src: url('./nasalization-rg.ttf');
+}
+
+
+#body{
+    font-family: 'Nasalization';
+    background: rgb(66,47,92);
+    color:white
+}
+
+mark{
+    background-color:  rgb(66,47,92);
+    color:rgb(26, 20, 54)
+}
+a{color:white}
+
+#para14,#para9,#para10,#para11,#para13,#para18,#para19,#para21,#para22{
+    font-family: 'Nasalization';    
+    color:white
+}
