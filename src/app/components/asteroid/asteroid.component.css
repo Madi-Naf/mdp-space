@@ -56,6 +56,7 @@ Pour créer un cercle à partir de cet élément figure, Je lui donne une largeu
     position: absolute;
     animation: move-eye-skew 5s ease-out infinite;
   }
+  
   .iris:before {
     content: "";
     display: block;
@@ -67,6 +68,7 @@ Pour créer un cercle à partir de cet élément figure, Je lui donne une largeu
     left: 31.25%;
     background: black;
   }
+
   .iris:after {
     content: "";
     display: block;
@@ -80,13 +82,14 @@ Pour créer un cercle à partir de cet élément figure, Je lui donne une largeu
   }
   
   .ball .shadow {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-  transform: rotateX(90deg) translateZ(-150px);
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(90deg) translateZ(-150px);
     z-index: -1;
   }
+
   .stage {
     width: 10em;
     height: 10em;
@@ -97,6 +100,7 @@ Pour créer un cercle à partir de cet élément figure, Je lui donne une largeu
     transform-style: preserve-3d;
     transform: rotateY(0.01deg);
   }
+
   body {
     height: 10em;
     margin: 20px auto;
