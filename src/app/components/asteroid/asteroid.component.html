@@ -23,7 +23,7 @@
             <span class="iris"></span>
           </figure>
         </section>
-        <button (click)=getCard(item) class="btn btn-info" target="_blank"> {{ item.name }}
+        <button (click)=getCard(item.link) class="btn btn-info" target="_blank"> {{ item.name }}
         </button>
       </div>
     </div>
@@ -34,6 +34,6 @@
 <div *ngIf="card" class="container bg-sky-stars content-center">
   <div class="row">
     <!-- Composant AsteroidDetailComponent -->
-<asteroid-detail [startDate]=startDate [endDate]=endDate [link]="item.link" #detailsBinding></asteroid-detail>
+<asteroid-detail [startDate]=startDate [endDate]=endDate [link]=shareLink #detailsBinding></asteroid-detail>
   </div>
 </div>

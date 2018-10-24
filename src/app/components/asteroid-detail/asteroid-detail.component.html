@@ -35,14 +35,14 @@
 					<li class="class={{hazardous}}">
 						<h6>
 							This Asteroid is
-							<ng-container *ngIf="details.hazardous, else notHazardous">
+							<ng-container *ngIf="details.hazardous;else notHazardous">
 								hazardous
 							</ng-container>
-							<ng-container #notHazardous>
+							<ng-template #notHazardous>
 								not hazardous
-							</ng-container>
+							</ng-template>
 						</h6>
-						Hazardous :  {{ details.ha }}
+						Hazardous :  {{ details.hazardous }}
 					</li>
 
 					<li class="list-group-item feature">
