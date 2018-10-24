@@ -3,7 +3,7 @@
 	<div  class="container mt-5 ">
 	  <div class="row">
 		  <ul class="list-group mt-10 col-5">
-			  <li class="list-group-item">nb Element : {{allAsteroid.nbAstero}} </li>
+			  <li class="list-group-item">Total Asteroid : {{allAsteroid.nbAstero}} </li>
 			</ul>
 	  </div>
 	</div> 
@@ -20,7 +20,7 @@
 				</figure>
 			</section>
 			  <button (click) = getCard(currentAstero)
-				  class="btn btn-info" target="_blank"> Asteroid Name: {{ currentAstero}} 
+				  class="btn btn-info" target="_blank"> Asteroid Name: {{ currentAstero  | nameFormat}} 
 			  </button>
 		  </div>
 	  </div>
