@@ -9,6 +9,7 @@ import { API_KEY, API_URL } from "../api-params";
 @Injectable({
   providedIn: 'root'
 })
+
 export class AsteroidService {
 
 	private serviceHttp: HttpClient;
@@ -17,6 +18,7 @@ export class AsteroidService {
 	  this.serviceHttp = http;
 	}
 
+	// Requête pour récupérer la liste et certains détails des astéroïdes en fonction d'une plage de date
 	public getResults(startDate: string, endDate: string): Observable<Results> {
 		return this.serviceHttp
 			.get<Results>(API_URL, {
@@ -25,6 +27,7 @@ export class AsteroidService {
 			});
 	}
 
+	// Requête pour récupérer les détails pour chaque astéroïde en fonction de son lien
 	public getDetails(link: string): Observable<Details> {
 		return this.serviceHttp
 			.get<Details>(link)
