@@ -1,4 +1,14 @@
 #formulaire{
-    background-color: rgb(79, 79, 88);
-    padding:10px 0 20px 0;
+/*     background-color: rgb(79, 79, 88);
+ */    padding:10px 0 20px 0;
+    color:rgb(170, 170, 177);
+     opacity:0.5;
+}
+#body{
+    background: linear-gradient(90deg, rgba(66,47,92,1) 20%, rgba(26,47,93,1) 51%, rgba(1,13,36,1) 100%);
+   
+}
+
+:host {
+    background-color: red;
 }

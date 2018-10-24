@@ -20,11 +20,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AsteroidComponent } from './components/asteroid/asteroid.component';
 import { AsteroidDetailComponent } from './components/asteroid-detail/asteroid-detail.component';
+import { DocumentationComponent } from './components/documentation/documentation.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'Contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: 'documentation', component: DocumentationComponent}
 ] 
 
 @NgModule({
@@ -39,7 +41,8 @@ const routes: Routes = [
     ContactComponent,
     FormsDateComponent,
     AsteroidComponent,
-    AsteroidDetailComponent   
+    AsteroidDetailComponent,
+    DocumentationComponent   
     
 
   ],
