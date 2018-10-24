@@ -25,7 +25,7 @@
         		<div class="card-body col-12">
 					<ul class="list-group list-group-flush">
 					<li class="list-group-item feature">
-						Name :  {{details.name}}
+						Name :  {{details.name | formatName}}
 					</li>
 					<li class="list-group-item feature">
 						<p>
@@ -35,14 +35,14 @@
 					<li class="class={{hazardous}}">
 						<h6>
 							This Asteroid is
-							<ng-container *ngIf="details.hazardous, else notHazardous">
+							<ng-container *ngIf="details.hazardous; else notHazardous">
 								hazardous
 							</ng-container>
-							<ng-container #notHazardous>
+							<ng-template #notHazardous>
 								not hazardous
-							</ng-container>
+							</ng-template>
 						</h6>
-						Hazardous :  {{ details.ha }}
+		
 					</li>
 
 					<li class="list-group-item feature">

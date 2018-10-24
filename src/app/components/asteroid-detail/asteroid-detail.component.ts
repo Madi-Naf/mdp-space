@@ -28,71 +28,71 @@ export class AsteroidDetailComponent implements OnInit {
 
     ngOnInit() {
 	// Asteroid information / identity
-   this.param_service.getDetails(this.link).subscribe(
-        (info) => {
+		this.param_service.getDetails(this.link).subscribe(
+			(info) => {
 
-		// fonction pour retrouver la date d'approche correspondant à une des dates choisies par l'utilisateur
-			function findDateIndex(): number{
-				let idx: number = 0;
-				// closeDateCount contient le nombre total des dates
-				let closeDateCount: number = info['close_approach_data'].length;
+			// fonction pour retrouver la date d'approche correspondant à une des dates choisies par l'utilisateur
+				function findDateIndex(): number{
+					let idx: number = 0;
+					// closeDateCount contient le nombre total des dates
+					let closeDateCount: number = info['close_approach_data'].length;
 
-				for(let i = 0; i < closeDateCount; i += 1){
-					if (info['orbital_data']['last_observation_date'] === 
-						info['close_approach_data'][i]['close_approach_date']){
-							idx = i;
-						}
+					for(let i = 0; i < closeDateCount; i += 1){
+						if (info['orbital_data']['last_observation_date'] === 
+							info['close_approach_data'][i]['close_approach_date']){
+								idx = i;
+							}
+					}
+					return idx ;
 				}
-				return idx ;
-			}
 
-			this.index = findDateIndex();
+				this.index = findDateIndex();
 
-		//  Affectation des caracteristiques des asteroides
-			this.details = {
-				name: 					  info['name'],
-				id: 					  info['id'],
+			//  Affectation des caracteristiques des asteroides
+				this.details = {
+					name: 					  info['name'],
+					id: 					  info['id'],
 
-				description: 			  info['orbital_data']['orbit_class']['orbit_class_description'],
-				hazardous:				  info['is_potentially_hazardous_asteroid'],
+					description: 			  info['orbital_data']['orbit_class']['orbit_class_description'],
+					hazardous:				  info['is_potentially_hazardous_asteroid'],
 
-				first_observation_date:   info['orbital_data']['first_observation_date'],
-				last_observation_date: 	  info['orbital_data']['last_observation_date'],
+					first_observation_date:   info['orbital_data']['first_observation_date'],
+					last_observation_date: 	  info['orbital_data']['last_observation_date'],
 
-				diameter_feet_max: 		  info['estimated_diameter']['feet']['estimated_diameter_max'],
-				diameter_feet_min: 		  info['estimated_diameter']['feet']['estimated_diameter_min'],
-				diameter_miles_max: 	  info['estimated_diameter']['miles']['estimated_diameter_max'],
-				diameter_miles_min: 	  info['estimated_diameter']['miles']['estimated_diameter_min'],
-				diameter_meters_max: 	  info['estimated_diameter']['meters']['estimated_diameter_max'],
-				diameter_meters_min: 	  info['estimated_diameter']['meters']['estimated_diameter_min'],
-				diameter_kilometers_max:  info['estimated_diameter']['kilometers']['estimated_diameter_max'],
-				diameter_kilometers_min:  info['estimated_diameter']['kilometers']['estimated_diameter_min'],
-				
-				velocity_kilometers_sec:  info['close_approach_data'][this.index]['relative_velocity']['kilometers_per_second'],
-				velocity_kilometers_hour: info['close_approach_data'][this.index]['relative_velocity']['kilometers_per_hour'],
-				velocity_miles_hour: 	  info['close_approach_data'][this.index]['relative_velocity']['miles_per_hour'],
-				
-				miss_astronomical:     	  info['close_approach_data'][this.index]['miss_distance']['astronomical'],
-				miss_lunar:				  info['close_approach_data'][this.index]['miss_distance']['lunar'],
-				miss_kilometers: 		  info['close_approach_data'][this.index]['miss_distance']['kilometers'],
-				miss_miles: 			  info['close_approach_data'][this.index]['miss_distance']['miles'],
-				
-				orbiting_body: 			  info['close_approach_data'][this.index]['orbiting_body']
-			}
+					diameter_feet_max: 		  info['estimated_diameter']['feet']['estimated_diameter_max'],
+					diameter_feet_min: 		  info['estimated_diameter']['feet']['estimated_diameter_min'],
+					diameter_miles_max: 	  info['estimated_diameter']['miles']['estimated_diameter_max'],
+					diameter_miles_min: 	  info['estimated_diameter']['miles']['estimated_diameter_min'],
+					diameter_meters_max: 	  info['estimated_diameter']['meters']['estimated_diameter_max'],
+					diameter_meters_min: 	  info['estimated_diameter']['meters']['estimated_diameter_min'],
+					diameter_kilometers_max:  info['estimated_diameter']['kilometers']['estimated_diameter_max'],
+					diameter_kilometers_min:  info['estimated_diameter']['kilometers']['estimated_diameter_min'],
+					
+					velocity_kilometers_sec:  info['close_approach_data'][this.index]['relative_velocity']['kilometers_per_second'],
+					velocity_kilometers_hour: info['close_approach_data'][this.index]['relative_velocity']['kilometers_per_hour'],
+					velocity_miles_hour: 	  info['close_approach_data'][this.index]['relative_velocity']['miles_per_hour'],
+					
+					miss_astronomical:     	  info['close_approach_data'][this.index]['miss_distance']['astronomical'],
+					miss_lunar:				  info['close_approach_data'][this.index]['miss_distance']['lunar'],
+					miss_kilometers: 		  info['close_approach_data'][this.index]['miss_distance']['kilometers'],
+					miss_miles: 			  info['close_approach_data'][this.index]['miss_distance']['miles'],
+					
+					orbiting_body: 			  info['close_approach_data'][this.index]['orbiting_body']
+				}
 
-		//  Affectatrion des valeur sur les variables de selectoin
-			this.selectedDiamMin  = this.details.diameter_kilometers_min;
-			this.selectedDiamMax  = this.details.diameter_kilometers_max;
-			this.selectedVelocity =  this.details.velocity_kilometers_hour;
-		
-		//	Mise en valeur de la dangereusité d'un asteroid
-        	if(this.details.hazardous){
-            	this.hazardous = "degerous list-group-item feature";  
-			}else{
-				this.hazardous = "no-degerous list-group-item feature";  
-			}
+			//  Affectatrion des valeur sur les variables de selectoin
+				this.selectedDiamMin  = this.details.diameter_kilometers_min;
+				this.selectedDiamMax  = this.details.diameter_kilometers_max;
+				this.selectedVelocity =  this.details.velocity_kilometers_hour;
+			
+			//	Mise en valeur de la dangereusité d'un asteroid
+				if(this.details.hazardous){
+					this.hazardous = "degerous list-group-item feature";  
+				}else{
+					this.hazardous = "no-degerous list-group-item feature";  
+				}
 
-        });
+		});
     }
 
   	//  Methode de Selection des unités des diametre 
