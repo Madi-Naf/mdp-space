@@ -7,48 +7,60 @@
 <div class="container content-center">
   	<div class="row mt-5">
     	<div class="col-12 content-center">
-			  <div class="card container" style="width: 40rem; ">
+
+			<div class="card container" style="width: 40rem; ">
 				
         		<div class="row">
-          			<div class="col-8">
+          			<div class="col-5">
             			<img class="img-circle-card" 
 							src="https://i.postimg.cc/mr7nBwp2/rp5_INUg-asteroid-wallpaper.jpg">
           			</div>
-					<div class="2">
-						<!-- <h2>id : {{idIs.id }}</h2> -->
+					<div class="col-7">
+						<h2>id: </h2>
 					</div>
           
         		</div>
       
 
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item feature">Name : {{asteroInfo.name | nameFormat}} </li>
-            <li class="list-group-item feature">Hazardous : {{asteroInfo.hazardous}} </li>
+        		<div class="card-body col-12">
+					<ul class="list-group list-group-flush">
+					<li class="list-group-item feature">Name :  </li>
+					<li class="list-group-item feature">Hazardous :  </li>
 
-            <li class="list-group-item feature">
-              <h5> Estimated dimeter min : {{asteroInfo.minMeters}} m</h5>
-              <h5> Estimated dimaeter max : {{asteroInfo.maxMeters}} m</h5>
-            </li>
-            <li class="list-group-item feature">
-              <h5> Estimated dimeter min : {{asteroInfo.minKm}} km</h5>
-              <h5> Estimated dimeter max : {{asteroInfo.maxKm}} km</h5>
-            </li>
-            <li class="list-group-item feature">
-              <h5> Estimated dimeter min : {{asteroInfo.minMiles}} miles</h5>
-              <h5> Estimated dimeter max : {{asteroInfo.maxMiles}} miles</h5>
-            </li>
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3"> Estimated dimaeter min : 
+							<select (change)="selectUnitMin($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km</option>
+								<option value="2"  >m</option>
+								<option value="3">miles</option>
+							</select>
+						</h5>
 
-            <li class="list-group-item feature">
-                <h5> Relative velocity  : </h5>
-                <p> {{asteroInfo.velocityKmh}}  Km/h </p>
-                <p> {{asteroInfo.velocityKms}}  Km/s <p>
-                <p> {{asteroInfo.velocityMilesh}}  miles/h  <p>
-            </li>
-            <li class="list-group-item feature">Delsta distance : {{asteroInfo.deltaDistanceKm }} km</li>
-            </ul>
-        </div>
-      </div>
+						<h5 class="dropdown mb-3"> Estimated dimaeter max : 
+							<select (change)="selectUnitMax($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km</option>
+								<option value="2"  >m</option>
+								<option value="3">miles</option>
+							</select>
+						</h5>
+					</li>
+
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3"> Estimated dimaeter max : 
+							<select (change)="selectVelocite($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km/h</option>
+								<option value="2"  >Km/s</option>
+								<option value="3">miles/h</option>
+							</select>
+						</h5>
+					</li>
+					<li class="list-group-item feature">Delsta distance :  km</li>
+				</ul>
+        	</div>
+      	</div>
     </div>
 
   </div>
