@@ -89,4 +89,6 @@ export class AsteroidInfo implements AsteroidIdentity{
     velocityKmh: number;
     velocityKms: number;
     velocityMilesh: number;
+
+    deltaDistanceKm: number;
 }
