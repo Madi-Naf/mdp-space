@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { HttpClient} from "@angular/common/http";
 
-import { AsteroidId, AsteroidInfo, AllAsteroid, AllIds, MyId } from "../asteroid-info";
+import { Results, Details, AsteroidId, AsteroidInfo, AllAsteroid, AllIds, MyId } from "../asteroid-info";
 import { API_KEY, API_URL, startDate, endDate, SELF_URL, selfId } from "../api-params";
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +18,26 @@ export class AsteroidService {
 	constructor(private http: HttpClient) {
 	  this.serviceHttp = http;
 	}
+
+	// ===========================================================
+
+
+
+	public getResults(startDate: string, endDate: string): Observable<Results> {
+		return this.serviceHttp
+			.get<Results>('https://api.nasa.gov/neo/rest/v1/feed?', {
+				params:
+					{ 'start_date': startDate, 'end_date': endDate, 'api_key': 'kfZxQxzj00SlzYvCHUZtTvlhD1XsccCxgW2LPwDd' }
+			});
+	}
+
+	public getDetails(link: string): Observable<Details> {
+		return this.serviceHttp
+			.get<Details>(link)
+	}
+
+
+// ===========================================================
 
 	//   private apiUrl: string = `${API_URL}start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY }`;
 	private selfUrl: string = `${SELF_URL}${selfId}?api_key=${API_KEY}`;
