@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsDateComponent implements OnInit {
 
+  // Dates par défaut
+  public startDate = '2018-09-14';
+  public endDate = '2018-09-15';
+  
+
   private seeAsteroid: boolean = false;
 
   constructor() { }
