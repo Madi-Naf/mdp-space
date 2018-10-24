@@ -11,10 +11,13 @@ import { Results } from 'src/app/asteroid-info';
   styleUrls: ['./asteroid.component.css']
 })
 
-export class AsteroidComponent implements OnInit {
+export class AsteroidComponent implements OnInit { 
 
     // Création d'une propriété card, false par défaut
     public card: boolean = false; 
+
+    // Permet de decider l'affichage de l'animation de chargement
+    public loading: boolean = true;
 
     // Récupération des dates transmises par l'élément parent FormsDateComponent
     @Input() startDate: string;
@@ -57,6 +60,8 @@ export class AsteroidComponent implements OnInit {
                             this.arrayInfos.push(this.results);
                         }
                     };
+
+                    this.loading = false;
                 }
             )
 
