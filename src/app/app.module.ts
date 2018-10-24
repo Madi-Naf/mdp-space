@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms'
 // Asteroid service
 import { AsteroidService } from './services/asteroid.service';
 // Name format class
-import { NameFormat } from './name-format';
+import { NameFormatPipe } from './pipes/name-format.pipe';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,6 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AsteroidComponent } from './components/asteroid/asteroid.component';
 import { AsteroidDetailComponent } from './components/asteroid-detail/asteroid-detail.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
+
 
 
 const routes: Routes = [
@@ -34,15 +35,13 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
-
-    NameFormat,
-
     FooterComponent,
     ContactComponent,
     FormsDateComponent,
     AsteroidComponent,
     AsteroidDetailComponent,
-    DocumentationComponent   
+    DocumentationComponent,
+    NameFormatPipe   
     
 
   ],
