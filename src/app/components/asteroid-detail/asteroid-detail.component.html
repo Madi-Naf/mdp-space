@@ -25,14 +25,14 @@
         		<div class="card-body col-12">
 					<ul class="list-group list-group-flush">
 					<li class="list-group-item feature">
-						Name :  {{details.name | formatName}}
+						Name :  {{details.name | nameFormat}}
 					</li>
 					<li class="list-group-item feature">
 						<p>
 							Description : {{ details.description}}
 						</p>
 					</li>
-					<li class="class={{hazardous}}">
+					<li class="class={{hazardousClass}}">
 						<h6>
 							This Asteroid is
 							<ng-container *ngIf="details.hazardous; else notHazardous">
@@ -46,7 +46,7 @@
 
 					<li class="list-group-item feature">
 						<h5 class="dropdown mb-3">
-							 Estimated dimaeter min : {{selectedDiamMin | number}}
+							 Estimated dimeter min : {{selectedDiamMin | number}}
 							<select (change)="selectUnitMin($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1" >Km</option>
@@ -55,7 +55,7 @@
 							</select>
 						</h5>
 
-						<h5 class="dropdown mb-3"> Estimated dimaeter max : {{selectedDiamMax | number}}
+						<h5 class="dropdown mb-3"> Estimated dimeter max : {{selectedDiamMax | number}}
 							<select (change)="selectUnitMax($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1" >Km</option>
@@ -83,12 +83,13 @@
 					</li>
 
 					<li class="list-group-item feature">
-						<h5 class="dropdown mb-3"> Miss Distance : {{ selectedMissDistance | number}}
-							<select (change)="electMissDistance($event)"
+						<h5 class="dropdown mb-3"> Miss Diatance : {{selectedMissDistance | number}}
+							<select (change)="slectMissDistance($event)"
 								class="btn btn-secondary dropdown-toggle">
-								<option value="1" >Km/h</option>
-								<option value="2"  >Km/s</option>
-								<option value="3">miles/h</option>
+								<option value="1">km</option>
+								<option value="2">miles</option>
+								<option value="3">astronomical</option>
+								<option value="4">lunar</option>
 							</select>
 						</h5>
 					</li>

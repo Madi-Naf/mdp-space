@@ -13,7 +13,7 @@ export class AsteroidDetailComponent implements OnInit {
 	@Input() endDate: string;
 
 	public index: number;
-	public hazardous: string;
+	public hazardousClass: string;
 
 	public selectedDiamMin: number;
 	public selectedDiamMax: number;
@@ -87,9 +87,9 @@ export class AsteroidDetailComponent implements OnInit {
 			
 			//	Mise en valeur de la dangereusité d'un asteroid
 				if(this.details.hazardous){
-					this.hazardous = "degerous list-group-item feature";  
+					this.hazardousClass = "degerous list-group-item feature";  
 				}else{
-					this.hazardous = "no-degerous list-group-item feature";  
+					this.hazardousClass = "no-degerous list-group-item feature";  
 				}
 
 		});
@@ -133,11 +133,18 @@ export class AsteroidDetailComponent implements OnInit {
 	//  Methode de Selection des unités de la distance d'approche par rapport à la terre 
 	public selectMissDistance(event: any){
 		if( event.target.value == '1'){
-			return this.selectedMissDistance = this.details.velocity_kilometers_hour;
+			return this.selectedMissDistance = this.details.miss_kilometers;
 		}else if(event.target.value == '2'){
-			return this.selectedMissDistance = this.details.velocity_kilometers_sec;
+			return this.selectedMissDistance = this.details.miss_miles;
 		}else if(event.target.value == '3'){
-			return this.selectedMissDistance = this.details.velocity_miles_hour;
+			return this.selectedMissDistance = this.details.miss_astronomical;
+		}else if(event.target.value == '4'){
+			return this.selectedMissDistance = this.details.miss_lunar;
 		}
 	}
+
 }
+
+
+
+
