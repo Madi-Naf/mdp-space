@@ -7,8 +7,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 // importation du form Module
 import { FormsModule } from '@angular/forms'
-
+// Asteroid service
 import { AsteroidService } from './services/asteroid.service';
+// Name format class
+import { NameFormat } from './name-format';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -32,6 +34,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
+
+    NameFormat,
 
     FooterComponent,
     ContactComponent,
