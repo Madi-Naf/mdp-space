@@ -23,7 +23,7 @@
             <span class="iris"></span>
           </figure>
         </section>
-        <button (click)=getCard(item.link) class="btn btn-info" target="_blank"> {{ item.name }}
+        <button (click)=getCard(item) class="btn btn-info" target="_blank"> {{ item.name | nameFormat }}
         </button>
       </div>
     </div>
