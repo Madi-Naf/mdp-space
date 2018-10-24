@@ -1,9 +1,11 @@
+// Classe qui doit recevoir les résultats qui nous intéressent de la requête vers l'API de la NASA
 export class Results {
     name: string;
     id: string;
     link: string;
 }
 
+// Classe qui doit recevoir les détails qui nous intéressent de la requête vers l'API de la NASA
 export class Details {
     name: string;
     id: string;
