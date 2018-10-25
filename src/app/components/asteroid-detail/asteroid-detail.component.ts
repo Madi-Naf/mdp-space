@@ -14,6 +14,7 @@ export class AsteroidDetailComponent implements OnInit {
 
 	public index: number;
 	public hazardousClass: string;
+	public hazardousMessage: string;
 
 	public selectedDiamMin: number;
 	public selectedDiamMax: number;
@@ -87,9 +88,11 @@ export class AsteroidDetailComponent implements OnInit {
 			
 			//	Mise en valeur de la dangereusité d'un asteroid
 				if(this.details.hazardous){
-					this.hazardousClass = "degerous list-group-item feature";  
+					this.hazardousClass = "degerous list-group-item feature"; 
+					this.hazardousMessage = "This asteroid is potentially hazardous"; 
 				}else{
-					this.hazardousClass = "no-degerous list-group-item feature";  
+					this.hazardousClass = "no-degerous list-group-item feature"; 
+					this.hazardousMessage = "This Asteroid is not hazardous"; 
 				}
 
 		});
