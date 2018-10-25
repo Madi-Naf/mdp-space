@@ -8,6 +8,7 @@ import { AsteroidService } from 'src/app/services/asteroid.service';
 })
 export class HomeComponent implements OnInit {
 
+  public homeGoHome: boolean = true;
   public greatUser:string = "Welcome to mdpSpace";
   public formsDate = false;
   public hiddeenClass:string ;
