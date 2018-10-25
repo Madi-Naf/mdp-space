@@ -1,37 +1,45 @@
 <div class="container-fluid bg-darkblue jumbotron">
 
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h1 class="title text-center text-white py-5 my-5">{{greatUser}}</h1>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <p class="col-9 description text-white py-5 my-5">
-        We are not aware but on these last 24 hours, have to rub the earth.
-        Do not panic, our planet is not in danger because here we are speaking about 50 millions kilometers.
-        Click on the button below to know the number of Asteroids who visited us.
-      </p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <button id="vewmore" class="btn btn-lg bg-purple text-white btn-block mt-5  mb-5 {{hiddeenClass}}" (click)="getFormsDate()">
-          Let's start
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="container-fluid bg-darkblue">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div *ngIf="formsDate" class="pb-5 bg-sky-stars">
-          <app-forms-date></app-forms-date>
+    <div class="container-fluid">
+      	<div class="row justify-content-center">
+        	<div class="col-12">
+            	<h1 class="title text-center">
+           	 		<img  class="logo-home" src="src/assets/img/mdp-space-logo.png" alt="mdp.space">
+            	</h1>
+        	</div>
         </div>
-      </div>
-    </div>
-  </div>  
+	</div>
+	
+    <div class="container-fluid">
+      	<div class="row justify-content-center">
+			<p class="col-9 description text-white">
+			We are not aware but on these last 24 hours,  have to rub the earth.
+			Do not panic, our planet is not in danger because here we are speaking about 50 millions kilometers.
+			Click on the button below to know the number of Asteroids who visited us.
+			</p>
+      	</div>
+      	<div class="row justify-content-center">
+        	<div class="col-6">
+          		<a href="#endDate" id="vewmore"  (click)="getFormsDate()"
+          			class="btn btn-lg bg-purple text-white btn-block {{hiddeenClass}}">
+              		<span> Let's start</span>
+          		</a>
+        	</div>
+      	</div>
+	</div>
+	
+</div>
 
+<div class="container-fluid bg-darkblue">
+	<div class="row justify-content-center">
+		<div class="col-12">
+			<div *ngIf="formsDate" class="pb-5 bg-sky-stars">
+				<app-forms-date></app-forms-date>
+			</div>
+		</div>
+	</div>
+</div>  
+  
+  
+  
 
