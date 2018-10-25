@@ -1,4 +1,4 @@
-<div *ngIf="!card" class="mt-5 allastero">
+<div *ngIf="!card" class="mt-5 ">
    <!-- ########################################## 
 		Une animation de chargement se lance lorque la requete des asteroid
 		n'est pas encore fini
@@ -21,7 +21,7 @@
 		########################################## -->
 		<div  *ngIf= "!loading"  class="container mt-5 bg-transparent rounded">
 			<div class="row justify-content-center">
-				<div class="mt-10 col-8 p-3">
+				<div class="col-8 p-3 allastero">
 					<p class="text-white text-justify">
 					Congratulations, we found a total of <span class="font-weight-bold">{{ arrayInfos.length }} asteroids</span> that	approached the Earth <span class="font-weight-bold">between {{ startDate }} and {{ endDate }}</span> !
 					</p>
