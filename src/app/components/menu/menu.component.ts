@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+    @Input() navGoHome: boolean;
   constructor() { }
 
   ngOnInit() {
   }
 
+  public getGoHome(){
+    if( !this.navGoHome){
+      this.navGoHome = true;
+    }
+
+  }
 }

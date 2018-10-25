@@ -8,6 +8,8 @@ import { Details } from 'src/app/asteroid-info';
 	styleUrls: ['./asteroid-detail.component.css']
 })
 export class AsteroidDetailComponent implements OnInit {
+	@Input() goHome: boolean;
+
 	@Input() link: string;
 	@Input() startDate: string;
 	@Input() endDate: string;
