@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
   public greatUser:string = "Welcome to mdpSpace";
   public formsDate = false;
   public hiddeenClass:string ;
-  public today: number = Date.now();
+
+  public elementCount: number; 
+  public date: any = Date.now();
   
 
 
@@ -20,11 +22,29 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.date = this.formatDate(this.date);
+    return this.param_service.getResults(this.date, this.date).subscribe(
+      (data) => {
+        this.elementCount = data['element_count'];
+      }
+    )
   }
 
   getFormsDate(): void {
     this.formsDate = true;
     this.hiddeenClass = "visibility-hidden";
   }
+
+  formatDate(date) {
+  let d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [year, month, day].join('-');
+}
 
 }
