@@ -1,9 +1,11 @@
+// Classe qui doit recevoir les résultats qui nous intéressent de la requête vers l'API de la NASA
 export class Results {
     name: string;
     id: string;
     link: string;
 }
 
+// Classe qui doit recevoir les détails qui nous intéressent de la requête vers l'API de la NASA
 export class Details {
     name: string;
     id: string;
@@ -27,68 +29,4 @@ export class Details {
     miss_kilometers: string;
     miss_miles: string;
     orbiting_body: string;
-}
-
-// ===================  ALL ASTEROID ID  =============================
-export interface AllAsteroid{
-    nbAstero: number;
-    idAstero: number[];
-    asteroName: string[];
-}
-export class AllIds implements AllAsteroid {
-    nbAstero: number;
-    idAstero: number[];
-    asteroName: string[];
-}
-// ===================  ASTEROID ID  =============================
-export interface AsteroidId{
-    id: number;
-}
-export class MyId implements AsteroidId{
-    id: number;
-}
-// ===================  ASTEROID IDENTITY  =============================
-export interface AsteroidIdentity{
-    id: number;
-    name: string;
-    hazardous: boolean;
-
-    approchTime: number;
-
-    maxMiles:number;
-    minMiles:number;
-
-    maxMeters:number;
-    minMeters:number;
-
-    maxKm:number;
-    minKm:number;
-
-    velocityKmh: number;
-    velocityKms: number;
-    velocityMilesh: number;
-
-}
-
-export class AsteroidInfo implements AsteroidIdentity{
-    id: number;
-    name: string;
-    hazardous: boolean;
-
-    approchTime: number;
-
-    maxMiles:number;
-    minMiles:number;
-
-    maxMeters:number;
-    minMeters:number;
-
-    maxKm:number;
-    minKm:number;
-
-    velocityKmh: number;
-    velocityKms: number;
-    velocityMilesh: number;
-
-    deltaDistanceKm: number;
 }
