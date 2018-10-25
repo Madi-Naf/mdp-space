@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mdp-space';
+
+  public goHome: boolean = true;
+
+
 }

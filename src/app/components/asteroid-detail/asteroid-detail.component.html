@@ -32,7 +32,7 @@
 							Description : {{ details.description}}
 						</p>
 					</li>
-					<li class="class={{hazardousClass}}">
+					<li class={{hazardousClass}}>
 						<h6>
 							{{hazardousMessage}}
 						</h6>
@@ -40,7 +40,7 @@
 
 					<li class="list-group-item feature">
 						<h5 class="dropdown mb-3">
-							 Estimated dimeter min : {{selectedDiamMin | number}}
+							 Estimated diameter min : {{selectedDiamMin | number}}
 							<select (change)="selectUnitMin($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1" >Km</option>
@@ -49,7 +49,7 @@
 							</select>
 						</h5>
 
-						<h5 class="dropdown mb-3"> Estimated dimeter max : {{selectedDiamMax | number}}
+						<h5 class="dropdown mb-3"> Estimated diameter max : {{selectedDiamMax | number}}
 							<select (change)="selectUnitMax($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1" >Km</option>
@@ -77,7 +77,7 @@
 					</li>
 
 					<li class="list-group-item feature">
-						<h5 class="dropdown mb-3"> Miss Diatance : {{selectedMissDistance | number}}
+						<h5 class="dropdown mb-3"> Miss Distance : {{selectedMissDistance | number}}
 							<select (change)="slectMissDistance($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1">km</option>
