@@ -1,109 +1,99 @@
 /* ----------------------------------\
-            Eye Animation
+              Sphere
 \  -------------------------------- */
+.circle {
+	display: block;
+	border-radius: 50%;
 
-/*
-Figure est un élément HTML5 qui représente une image ou un diagramme qui peut être retiré du contenu sans en affecter le sens.
-Pour créer un cercle à partir de cet élément figure, Je lui donne une largeur, une hauteur et un radian de 50% de la bordure. N’importe quoi au-delà de 50% résultera en un angle absolument rond.
-*/
-@keyframes move-eye-skew {
-    0% {
-      transform: none;
-    }
-    20% {
-      transform: translateX(-0.9em) translateY(3em) skewX(15deg) skewY(-10deg) scale(0.95);
-    }
-    25%, 44% {
-      transform: none;
-    }
-    50%, 60% {
-      transform: translateX(3em) translateY(-0.1em) skewX(5deg) skewY(2deg) scaleX(0.95);
-    }
-    66%, 100% {
-      transform: none;
-    }
+	height: 10em;
+	width: 10em;
+	margin: 0;
+	margin-left: 1em;
+	background: radial-gradient(circle, rgba(208,200,223,1) 0%, rgba(141,87,251,1) 49%, rgba(18,2,51,1) 99%);
   }
-  
-  .ball {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: 50%;
-    position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+  .circle:hover {
+	display: block;
+	border-radius: 50%;
+	height: 10em;
+	width: 10em;
+	margin: 0;
+	background: radial-gradient(circle, rgba(255,254,255,1) 0%, rgba(255,202,81,1) 42%, rgba(154,41,22,1) 83%);
   }
-  
-  .ball:after {
-    content: "";
-    position: absolute;
-    top: 5%;
-    left: 10%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
-    transform: translateX(-2em) translateY(-3em) skewX(-20deg);
-  }
-  
-  .iris {
-    width: 40%;
-    height: 40%;
-    margin: 30%;
-    border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
-    transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
-    position: absolute;
-    animation: move-eye-skew 5s ease-out infinite;
-  }
-  
-  .iris:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 37.5%;
-    height: 37.5%;
-    border-radius: 50%;
-    top: 31.25%;
-    left: 31.25%;
-    background: black;
-  }
+/* ========================================================================================
+    Figure est un élément HTML5 qui représente une image ou un diagramme
+    qui peut être retiré du contenu sans en affecter le sens.
+    Pour créer un cercle à partir de cet élément figure,
+    Je lui donne une largeur, une hauteur et un radian de 50% de la bordure. 
+    N’importe quoi au-delà de 50% résultera en un angle absolument rond.
+    ========================================================================================*/
+/* ----------------------------------\
+        Animation de chargement
+\  -------------------------------- */
+.loading{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 3em;
+	display: flex;
+	align-items: center;
+}
 
-  .iris:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 31.25%;
-    height: 31.25%;
-    border-radius: 50%;
-    top: 18.75%;
-    left: 18.75%;
-    background: rgba(255, 255, 255, 0.2);
+.obj{
+	width: 1em;
+	height: 3em; 
+	background: linear-gradient(0deg, rgba(207,149,241,1) 49%, rgba(70,31,114,1) 100%);
+	margin: 0 0.3em;
+	border-radius: 1em;
+	animation: loading 0.8s infinite;
+}
+
+.obj:nth-child(2){
+	animation-delay: 0.1s;
+}
+.obj:nth-child(3){
+	animation-delay: 0.2s;
+}
+.obj:nth-child(4){
+	animation-delay: 0.3s;
+}
+.obj:nth-child(5){
+	animation-delay: 0.4s;
+}
+.obj:nth-child(6){
+	animation-delay: 0.5s;
+}
+.obj:nth-child(7){
+	animation-delay: 0.6s;
+}
+.obj:nth-child(8){
+	animation-delay: 0.7s;
+}
+
+@keyframes loading {
+	0%{
+		height: 0;
+	}50%{
+		height: 4em;
+	}100%{
+		height: 0;
+	}
+}
+/* ----------------------------------\
+                Button
+\  -------------------------------- */
+.middle{
+	width: 100% !important;
+	text-align: center;
+}
+.btn{
+	margin-top: 1.5em;
+	border-radius: 1em;
+	border-color:  rgba(132, 55, 167, 1) !important;
+	color: white;
+  }
+  .btn:hover{
+	background-color: rgba(16, 10, 40, 1) !important;
+	font-size: 1.08em;
   }
   
-  .ball .shadow {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-    transform: rotateX(90deg) translateZ(-150px);
-    z-index: -1;
-  }
-
-  .stage {
-    width: 10em;
-    height: 10em;
-    display: inline-block;
-    margin: 2em;
-    perspective: 1200px;
-    perspective-origin: 50% 50%;
-    transform-style: preserve-3d;
-    transform: rotateY(0.01deg);
-  }
-
-  body {
-    height: 10em;
-    margin: 20px auto;
-    background: linear-gradient(to bottom, rgba(100, 100, 100, 0.2) 0%, rgba(255, 255, 255, 0.5) 40%, #ffffff 100%);
-    background-repeat: no-repeat;
-  }

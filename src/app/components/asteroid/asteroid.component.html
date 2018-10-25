@@ -1,29 +1,44 @@
 <div *ngIf="!card">
-  <!-- My NASA API TEST -->
-  <div class="container mt-5 ">
-    <div class="row">
-      <ul class="list-group mt-10 col-5">
-        <li class="list-group-item">
-          Congratulations, we found a total of <strong>{{ arrayInfos.length }} asteroids</strong> that approached the
-          Earth
-          <strong>between {{ startDate }} and {{ endDate }}</strong> !
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!--  Affichage des résultats  -->
-  <div class="container text-white">
-    <div class="row">
-      <!-- Pour chaque item du tableau arrayInfos -->
-      <div *ngFor="let item of arrayInfos; let i=index" class="col-3  mt-5">
-        <section class="stage">
-          <figure class="ball">
-            <span class="shadow"></span>
-            <span class="iris"></span>
-          </figure>
-        </section>
-        <button (click)=getCard(item) class="btn btn-info" target="_blank"> {{ item.name | nameFormat }}
+   <!-- ########################################## 
+		Une animation de chargement se lance lorque la requete des asteroid
+		n'est pas encore fini
+		########################################## -->
+		<div *ngIf= "loading">
+			<h5>loading...</h5>
+			<div class="loading">
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+			</div>
+		</div>
+		  <!-- ########################################## 
+		C'est seulement quand on a reçu toute les donnée à afficher que le chargement s'arrete
+		########################################## -->
+		<div  *ngIf= "!loading"  class="container mt-5">
+			<div class="row">
+				<ul class="list-group mt-10 col-5">
+					<li class="list-group-item">
+						Congratulations, we found a total of <strong>{{ arrayInfos.length }} asteroids</strong> that approached the
+						Earth <strong>between {{ startDate }} and {{ endDate }}</strong> !
+					</li>
+				</ul>
+			</div>
+		</div>
+ 
+  	<!--  Affichage des résultats  -->
+ 	 <div class="container text-white">
+    	<div class="row">
+      	<!-- Pour chaque item du tableau arrayInfos -->
+			  <div *ngFor="let item of arrayInfos; let i=index" 
+			  	class="col-12 col-md-6 col-lg-4 col-xl-4  mt-5">
+					<figure class="circle"></figure>
+        <button (click)=getCard(item) class="btn btn-info" target="_blank">
+			Asteroid Name : {{ item.name | nameFormat }}
         </button>
       </div>
     </div>
@@ -31,9 +46,13 @@
 </div>
 
 <!-- Si card vaut true, on affiche les détails -->
-<div *ngIf="card" class="container bg-sky-stars content-center">
-  <div class="row">
-    <!-- Composant AsteroidDetailComponent -->
-<asteroid-detail [startDate]=startDate [endDate]=endDate [link]=shareLink #detailsBinding></asteroid-detail>
-  </div>
+<div *ngIf="card" class="container bg-sky-stars">
+    <div class="row">
+	<!-- Composant AsteroidDetailComponent -->
+		<div class="col-12 mr-auto">
+			<asteroid-detail [startDate]=startDate [endDate]=endDate 
+						[link]=shareLink #detailsBinding>
+			</asteroid-detail>
+		</div>
+    </div>
 </div>
