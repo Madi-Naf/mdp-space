@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   public greatUser:string = "Welcome to mdpSpace";
   public formsDate = false;
   public hiddeenClass:string ;
+  public today: number = Date.now();
+  
 
 
   constructor(private param_service: AsteroidService) { 
@@ -18,7 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-  
   }
 
   getFormsDate(): void {
