@@ -13,10 +13,4 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  public getGoHome(){
-    if( !this.navGoHome){
-      this.navGoHome = true;
-    }
-
-  }
 }

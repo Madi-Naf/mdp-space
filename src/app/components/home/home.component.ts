@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.hiddeenClass = "visibility-visible";
     this.date = this.formatDate(this.date);
     return this.param_service.getResults(this.date, this.date).subscribe(
       (data) => {

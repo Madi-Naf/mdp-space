@@ -27,6 +27,9 @@ import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'forms', component: FormsDateComponent, pathMatch: 'full' },
+  { path: 'asteroid', component: AsteroidComponent, pathMatch: 'full' },
+  {path: 'details', component: AsteroidDetailComponent, pathMatch: 'full'},
   { path: 'contact', component: ContactComponent},
   { path: 'documentation', component: DocumentationComponent},
   { path: 'about', component: AboutComponent}

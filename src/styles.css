@@ -4,6 +4,9 @@
 	display: flex;
 	justify-content: center;	
 }
+body{
+  background-image: url('https://images.wallpaperscraft.com/image/starry_sky_stars_space_glitter_120044_1280x720.jpg') !important;
+}
 .bg-sky-stars {
   background-image: url('https://images.wallpaperscraft.com/image/starry_sky_stars_space_glitter_120044_1280x720.jpg') !important;
 }

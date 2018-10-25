@@ -29,7 +29,7 @@
 		  
       	<div class="row justify-content-center">
         	<div class="col-6">
-          		<a href="#endDate" id="viewmore"  (click)="getFormsDate()"
+          		<a routerLink="forms" id="viewmore"  (click)="getFormsDate()"
           			class="btn btn-lg bg-purple text-white btn-block {{hiddeenClass}}">
               		<span> Let's start</span>
           		</a>
@@ -39,15 +39,6 @@
 	
 </div>
 
-<div class="container-fluid bg-darkblue">
-	<div class="row justify-content-center">
-		<div class="col-12">
-			<div *ngIf="formsDate" class="pb-5 bg-sky-stars">
-				<app-forms-date></app-forms-date>
-			</div>
-		</div>
-	</div>
-</div>  
   
   
   
