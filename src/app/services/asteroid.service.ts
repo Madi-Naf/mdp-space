@@ -28,9 +28,10 @@ export class AsteroidService {
 	}
 
 	// Requête pour récupérer les détails pour chaque astéroïde en fonction de son lien
-	public getDetails(link: string): Observable<Details> {
+	public getDetails(link): Observable<Details> {
 		return this.serviceHttp
-			.get<Details>(link)
+			.get<Details>(link.link)
 	}
+
 
 }
