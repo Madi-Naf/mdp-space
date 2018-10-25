@@ -1,14 +1,26 @@
-#formulaire{
-/*     background-color: rgb(79, 79, 88);
- */    padding:10px 0 20px 0;
-    color:rgb(170, 170, 177);
-     opacity:0.5;
-}
-#body{
-    background: linear-gradient(90deg, rgba(66,47,92,1) 20%, rgba(26,47,93,1) 51%, rgba(1,13,36,1) 100%);
-   
+@font-face{
+    font-family: 'Nasalization';
+    src: url('./nasalization-rg.ttf');
 }
 
-:host {
-    background-color: red;
+#formulaire{
+    background-color: rgba(255, 255, 255,0.4);
+    padding:10px 0 20px 0;
+    color:rgb(10, 10, 51);
+   
 }
+#body{
+    font-family: 'Nasalization';
+
+    background-image: linear-gradient(90deg, rgba(66,47,92,0.85) 20%, rgba(26,47,93,0.2) 51%, rgba(1,13,36,0.85) 100%),
+                      url(https://images.wallpaperscraft.com/image/earth_moon_space_galaxy_118437_3840x2160.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+ #formulaire{
+    border: 2px solid;
+    border-color: none;
+    border-radius: 15px;
+ }

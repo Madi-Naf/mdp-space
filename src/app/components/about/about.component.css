@@ -1,0 +1,47 @@
+@font-face{
+    font-family: 'Nasalization';
+    src: url('./nasalization-rg.ttf');
+}
+
+
+#body{
+    font-family: 'Nasalization';
+    background: rgb(66,47,92);
+    color:white;
+    padding-bottom: 5%;
+    
+}
+
+mark{
+    background-color:  rgb(66,47,92);
+    color:white
+}
+
+a{
+    color:white;
+    text-decoration: underline
+
+}
+
+#para5,#para6a,#para6b,#para6c{
+    font-family: 'Nasalization';    
+    color:white
+}
+
+
+/* media-queries**************************************** */
+
+@media (max-width: 912px) {
+    .card-title{
+        font-size: 1em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card-title{
+        font-size: 2.5em;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+  }
