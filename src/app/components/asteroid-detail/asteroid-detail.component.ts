@@ -29,9 +29,12 @@ export class AsteroidDetailComponent implements OnInit {
 
     ngOnInit() {
 	// Asteroid information / identity
+	console.log("DEbut de mon ngOnInit");
+	
 		this.param_service.getDetails(this.link).subscribe(
 			(info) => {
-
+					console.log("=========Debut de ma fonction============");
+					
 			// fonction pour retrouver la date d'approche correspondant à une des dates choisies par l'utilisateur
 				function findDateIndex(): number{
 					let idx: number = 0;
@@ -94,6 +97,8 @@ export class AsteroidDetailComponent implements OnInit {
 					this.hazardousClass = "no-degerous list-group-item feature"; 
 					this.hazardousMessage = "This Asteroid is not hazardous"; 
 				}
+				console.log("fin de ma fonction");
+				
 
 		});
     }
