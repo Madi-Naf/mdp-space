@@ -21,12 +21,15 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AsteroidComponent } from './components/asteroid/asteroid.component';
 import { AsteroidDetailComponent } from './components/asteroid-detail/asteroid-detail.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'documentation', component: DocumentationComponent}
+  { path: 'documentation', component: DocumentationComponent},
+  { path: 'about', component: AboutComponent}
+
 ] 
 
 @NgModule({
@@ -42,7 +45,8 @@ const routes: Routes = [
     FormsDateComponent,
     AsteroidComponent,
     AsteroidDetailComponent,
-    DocumentationComponent   
+    DocumentationComponent,
+    AboutComponent   
     
 
   ],
