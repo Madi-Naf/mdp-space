@@ -14,9 +14,13 @@ mark{
     background-color:  rgb(66,47,92);
     color:rgb(26, 20, 54)
 }
-a{color:white}
 
-#para14,#para9,#para10,#para11,#para13,#para18,#para19,#para21,#para22{
+a{
+    color:white
+}
+
+#para9,#para10,#para11,#para14,#para18,#para19,#para13,#para21,#para22{
     font-family: 'Nasalization';    
     color:white
 }
+
