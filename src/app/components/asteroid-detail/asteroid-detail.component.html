@@ -48,6 +48,7 @@
 					</li>
 					<li class={{hazardousClass}}>
 						<h6>
+							<i *ngIf="details.hazardous" class="fas fa-skull-crossbones"></i>
 							{{hazardousMessage}}
 						</h6>
 					</li>
@@ -125,26 +126,27 @@
 								[(ngModel)]="explanationMissDistance" name="checkBoxDist">
 						</p> 
 							
-					</form>
-					<div *ngIf="explanationMissDistance" class="info"> 
-						<p>
-							<span class="font-weight-bold">Miss Distance : </span>
+						</form>
+						<div *ngIf="explanationMissDistance" class="info"> 
+							<p>
+								<span class="font-weight-bold">Miss Distance : </span>
 								It's just the distance <SPan class="font-weight-bold">between Asteroid and Earth.</SPan>	
-						</p>
-						<p>
-							<span class="font-weight-bold">ASTRONOMICAL :</span> The astronomical unit,
-											it corresponds approximately to the 
-											<SPan class="font-weight-bold">distance between the Earth and the Sun</SPan> 
-											is approximately 150 million kilometers
-						</p>
-						<p>
-							<span class="font-weight-bold">LUNAR :</span>In astronomy,
-									the lunar distance is <SPan class="font-weight-bold">
-										the average distance between the Earth and the Moon,
-									</SPan> which is 381 500 km. 
-									The actual distance varies according to the position of the Moon in its orbit,
-									 between 356 700 km perigee and 406 300 km at the apogee
-						</p>
+							</p>
+							<p>
+								<span class="font-weight-bold">ASTRONOMICAL :</span> The astronomical unit,
+								it corresponds approximately to the 
+								<SPan class="font-weight-bold">distance between the Earth and the Sun</SPan> 
+								is approximately 150 million kilometers
+							</p>
+							<p>
+								<span class="font-weight-bold">LUNAR :</span>In astronomy,
+								the lunar distance is <SPan class="font-weight-bold">
+									the average distance between the Earth and the Moon,
+								</SPan> which is 381 500 km. 
+								The actual distance varies according to the position of the Moon in its orbit,
+									between 356 700 km perigee and 406 300 km at the apogee
+							</p>
+						</div>
 					</li>
 				</ul>
         	</div>
