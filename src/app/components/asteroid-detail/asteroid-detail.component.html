@@ -31,9 +31,24 @@
 						<p>
 							Description : {{ details.description}}
 						</p>
+						<!-- ########################################## -->
+						<!-- le checkbox permet d'afficher plys d'information sur un élément -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+								<i class="fas fa-info-circle"></i> 
+								see more information:
+								<input type="checkbox"#checkBoxDesc="ngModel" 
+									[(ngModel)]="showDescription" name="checkBoxDesc">
+							</p> 
+								
+						</form>
+						<p *ngIf="showDescription" class="info"> 
+							this description comes directly from the NASA API
+						</p>
 					</li>
 					<li class={{hazardousClass}}>
 						<h6>
+							<i *ngIf="details.hazardous" class="fas fa-skull-crossbones"></i>
 							{{hazardousMessage}}
 						</h6>
 					</li>
@@ -68,6 +83,21 @@
 								<option value="3">miles/h</option>
 							</select>
 						</h5>
+						<!-- ########################################## -->
+						<!-- voir plus d'info sur la vélocité  -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+								<i class="fas fa-info-circle"></i> 
+								see more information:
+								<input type="checkbox"#checkBoxVelocity="ngModel" 
+									[(ngModel)]="explanationVelocity" name="checkBoxVelocity">
+							</p> 
+								
+						</form>
+						<p *ngIf="explanationVelocity" class="info"> 
+							<span class="font-weight-bold">VELOCITY :</span>
+								velocity is simply <span class="font-weight-bold">the speed </span>of the asteroid
+						</p>
 					</li>
 
 					<li class="list-group-item feature">
@@ -86,7 +116,37 @@
 								<option value="4">lunar</option>
 							</select>
 						</h5>
-					</li>
+						<!-- ########################################## -->
+						<!-- definition des termes et des unité de mesure -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+							<i class="fas fa-info-circle"></i> 
+							see more information: 
+							<input type="checkbox"#checkBoxDist="ngModel" 
+								[(ngModel)]="explanationMissDistance" name="checkBoxDist">
+						</p> 
+							
+						</form>
+						<div *ngIf="explanationMissDistance" class="info"> 
+							<p>
+								<span class="font-weight-bold">Miss Distance : </span>
+								It's just the distance <SPan class="font-weight-bold">between Asteroid and Earth.</SPan>	
+							</p>
+							<p>
+								<span class="font-weight-bold">ASTRONOMICAL :</span> The astronomical unit,
+								it corresponds approximately to the 
+								<SPan class="font-weight-bold">distance between the Earth and the Sun</SPan> 
+								is approximately 150 million kilometers
+							</p>
+							<p>
+								<span class="font-weight-bold">LUNAR :</span>In astronomy,
+								the lunar distance is <SPan class="font-weight-bold">
+									the average distance between the Earth and the Moon,
+								</SPan> which is 381 500 km. 
+								The actual distance varies according to the position of the Moon in its orbit,
+									between 356 700 km perigee and 406 300 km at the apogee
+							</p>
+						</div>
 				</ul>
         	</div>
       	</div>
