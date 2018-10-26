@@ -99,11 +99,33 @@
 								velocity is simply <span class="font-weight-bold">the speed </span>of the asteroid
 						</p>
 					</li>
-
+					<!-- ########################################## -->
+					<!-- definition orbite de l'asteroide -->
 					<li class="list-group-item feature">
 						<h5 class="dropdown mb-3">
 							Orbit body : {{ details.orbiting_body }}
 						</h5>
+						<form #myForm='ngForm'>
+						<p class="info">
+							<i class="fas fa-info-circle"></i>
+							see more information:
+							<input type="checkbox" #checkBoxOrbit="ngModel" [(ngModel)]="explanationOrbit" name="checkBoxOrbit">
+						</p>
+
+						</form>
+						<div *ngIf="explanationOrbit" class="info">
+						<p>
+							<span class="font-weight-bold">ORBIT :</span>In astronomy,
+							the orbit refers to <span class="font-weight-bold">the closed trajectory followed</span>
+							by a celestial body
+							around another celestial body
+							<span class="font-weight-bold"> on a periodic basis.</span>
+						</p>
+						<p>
+							<span class="font-weight-bold">BODY or CELESTIAL BODY :</span>
+							designate <span class="font-weight-bold">any object in the universe.</span>
+						</p>
+						</div>
 					</li>
 
 					<li class="list-group-item feature">
