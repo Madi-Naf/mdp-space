@@ -1,0 +1,102 @@
+.allastero{
+	margin-top: 5em !important;
+}
+/* ----------------------------------\
+              Sphere
+\  -------------------------------- */
+.circle {
+	display: block;
+	border-radius: 50%;
+
+	height: 10em;
+	width: 10em;
+	margin: 0;
+	margin-left: 1em;
+	background: radial-gradient(circle, rgba(208,200,223,1) 0%, rgba(141,87,251,1) 49%, rgba(18,2,51,1) 99%);
+  }
+  .circle:hover {
+	display: block;
+	border-radius: 50%;
+	height: 10em;
+	width: 10em;
+	margin: 0;
+	background: radial-gradient(circle, rgba(255,254,255,1) 0%, rgba(255,202,81,1) 42%, rgba(154,41,22,1) 83%);
+  }
+/* ========================================================================================
+    Figure est un élément HTML5 qui représente une image ou un diagramme
+    qui peut être retiré du contenu sans en affecter le sens.
+    Pour créer un cercle à partir de cet élément figure,
+    Je lui donne une largeur, une hauteur et un radian de 50% de la bordure. 
+    N’importe quoi au-delà de 50% résultera en un angle absolument rond.
+    ========================================================================================*/
+/* ----------------------------------\
+        Animation de chargement
+\  -------------------------------- */
+.loading{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 3em;
+	display: flex;
+	align-items: center;
+}
+
+.obj{
+	width: 1em;
+	height: 3em; 
+	background: linear-gradient(0deg, rgba(207,149,241,1) 49%, rgba(70,31,114,1) 100%);
+	margin: 0 0.3em;
+	border-radius: 1em;
+	animation: loading 0.8s infinite;
+}
+
+.obj:nth-child(2){
+	animation-delay: 0.1s;
+}
+.obj:nth-child(3){
+	animation-delay: 0.2s;
+}
+.obj:nth-child(4){
+	animation-delay: 0.3s;
+}
+.obj:nth-child(5){
+	animation-delay: 0.4s;
+}
+.obj:nth-child(6){
+	animation-delay: 0.5s;
+}
+.obj:nth-child(7){
+	animation-delay: 0.6s;
+}
+.obj:nth-child(8){
+	animation-delay: 0.7s;
+}
+
+@keyframes loading {
+	0%{
+		height: 0;
+	}50%{
+		height: 4em;
+	}100%{
+		height: 0;
+	}
+}
+/* ----------------------------------\
+                Button
+\  -------------------------------- */
+.middle{
+	width: 100% !important;
+	text-align: center;
+}
+.btn{
+	margin-top: 1.5em;
+	border-radius: 1em;
+	border-color:  rgba(132, 55, 167, 1) !important;
+	color: white;
+  }
+  .btn:hover{
+	background-color: rgba(16, 10, 40, 1) !important;
+	font-size: 1.08em;
+  }
+  

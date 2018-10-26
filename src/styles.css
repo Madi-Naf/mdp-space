@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.content-center{
+
+	display: flex;
+	justify-content: center;	
+}
+body{
+  background-image: url('https://images.wallpaperscraft.com/image/starry_sky_stars_space_glitter_120044_1280x720.jpg') !important;
+}
+.bg-sky-stars {
+  background-image: url('https://images.wallpaperscraft.com/image/starry_sky_stars_space_glitter_120044_1280x720.jpg') !important;
+}
+/* --------------------------------------------\
+              THEME COLORS
+\-------------------------------------------- */
+
+/*
+rgba(132, 55, 167, 1)
+rgba(179, 119, 215, 1)
+rgba(70, 31, 114, 1)
+rgba(16, 10, 40, 1)
+rgba(22, 20, 63, 1)
+*/
+.bg-gradient {
+  background: linear-gradient(90deg, rgba(70, 31, 114, 1) 0%, rgba(22, 20, 63, 1) 50%, rgba(16, 10, 40, 1) 100%) !important;
+}
+.nav-menu {
+    background: linear-gradient(90deg, rgba(66, 47, 92, 1) 20%, rgba(26, 47, 93, 1) 51%, rgba(1, 13, 36, 1) 100%);
+}
+
+
+
+.bg-pink {
+  background-color: rgba(132, 55, 167, 1) !important;
+}
+
+.pink {
+  color: rgba(132, 55, 167, 1) !important;
+}
+
+.bg-lightpink {
+  background-color: rgba(179, 119, 215, 1) !important;
+}
+
+.lightpink {
+  background-color: rgba(179, 119, 215, 1) !important;
+}
+
+.bg-purple {
+  background-color: rgba(70, 31, 114, 1) !important;
+}
+
+.purple {
+  background-color: rgba(70, 31, 114, 1) !important;
+}
+
+.bg-darkblue {
+  background-color: rgba(16, 10, 40, 1) !important;
+}
+
+.darkblue {
+  background-color: rgba(16, 10, 40, 1) !important;
+}
+
+.bg-blue {
+  background-color: rgba(22, 20, 63, 1) !important;
+}
+
+.blue {
+  background-color: rgba(22, 20, 63, 1) !important;
+}
+/* --------------------------------------------\
+              THEME BUTTON
+\-------------------------------------------- */
+.btn{
+  border-radius: 1em;
+  border-color:  rgba(132, 55, 167, 1) !important;
+}
+.btn:hover{
+  background-color: rgba(16, 10, 40, 1) !important;
+  font-size: 1.45em;
+}
+/*  class de visibité*/
+.visibility-hidden{
+  visibility: hidden;
+}
+.visibility-visible{
+  visibility: visible;
+}
+.checkbox-info{
+  font-size: 1em;
+}

@@ -1,0 +1,70 @@
+/* ---------------------------------------  \
+			IMAGE DE LA CARTE 
+\  --------------------------------------- */
+.img-circle-card{
+	border-radius: 50%;
+	width: 25%;
+}
+/* ---------------------------------------  \
+		TEXTE ET AUTRE CONTENUE
+\  --------------------------------------- */																																																																																																																																																																																																																																																																																						 
+.content-center{
+
+	display: flex;
+	justify-content: center;	
+}
+
+.feature{
+	font-size: 1.5em;	
+}
+.card{
+	margin-bottom: 25em;
+	/* margin-left: 10em; */
+	padding: 1em;
+	/* width: 25em ; */
+
+	background: rgba(221,23,227,0.45) !important;
+	color: white;
+	font-family: 'Century Gothic', sans-serif;
+	text-align: center;
+}
+
+.list-group-item{
+	background: rgba(0,0,0,0.7);
+}
+.card .btn{
+	background: radial-gradient(circle, rgba(254,254,254,1) 12%, rgba(203,146,241,1) 53%, rgba(78,5,126,1) 100%);
+	color: black;
+	font-size: 1.3em;
+}
+.card h2{
+	font-size: 2em;
+	font-weight: 100; 
+}
+
+.degerous{
+	background: radial-gradient(circle, rgba(189,0,0,1) 45%, rgba(231,53,53,1) 60%, rgba(241,146,146,1) 100%);
+}
+.no-degerous{
+	background: radial-gradient(circle, rgba(18,138,2,1) 45%, rgba(33,226,26,1) 60%, rgba(153,241,146,1) 100%);
+
+}
+
+.fa-info-circle{
+	color:  rgba(179, 119, 215, 1);
+	font-size: 1em;
+}
+
+.info{
+	font-size: 0.7em;
+}
+.fa-skull-crossbones{
+	color: rgba(16, 10, 40, 1) ;
+	font-size: 1.5em;
+}
+/* ---------------------------------------  \
+			BUTTON ET SELCTEUR
+\  --------------------------------------- */	
+option{
+	color: white;
+}

@@ -1,0 +1,178 @@
+<div class="container mt-5 pt-5">
+	<div class="row">
+    	<h2 class="text-white">Asteroid ID card</h2> 
+  	</div>
+</div>
+
+<div class="containerr">
+  	<div class="row mt-5">
+    	<div class="col-12 ">
+
+			<div class="card container">
+				
+        		<div class="row justify-content-center">
+          			<div class="col-7">
+            			<img class="img-circle-card" 
+							src="https://i.postimg.cc/mr7nBwp2/rp5_INUg-asteroid-wallpaper.jpg">
+          			</div>
+					<div class="col-5">
+						<h2>id: {{ details.id}}</h2>
+					</div>
+          
+        		</div>
+
+
+        		<div class="card-body col-12">
+					<ul class="list-group list-group-flush">
+					<li class="list-group-item feature">
+						Name :  {{details.name | nameFormat}}
+					</li>
+					<li class="list-group-item feature">
+						<p>
+							Description : {{ details.description}}
+						</p>
+						<!-- ########################################## -->
+						<!-- le checkbox permet d'afficher plys d'information sur un élément -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+								<i class="fas fa-info-circle"></i> 
+								see more information:
+								<input type="checkbox"#checkBoxDesc="ngModel" 
+									[(ngModel)]="showDescription" name="checkBoxDesc">
+							</p> 
+								
+						</form>
+						<p *ngIf="showDescription" class="info"> 
+							this description comes directly from the NASA API
+						</p>
+					</li>
+					<li class={{hazardousClass}}>
+						<h6>
+							<i *ngIf="details.hazardous" class="fas fa-skull-crossbones"></i>
+							{{hazardousMessage}}
+						</h6>
+					</li>
+
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3">
+							 Estimated diameter min : {{selectedDiamMin | number}}
+							<select (change)="selectUnitMin($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km</option>
+								<option value="2"  >m</option>
+								<option value="3">miles</option>
+							</select>
+						</h5>
+
+						<h5 class="dropdown mb-3"> Estimated diameter max : {{selectedDiamMax | number}}
+							<select (change)="selectUnitMax($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km</option>
+								<option value="2"  >m</option>
+								<option value="3">miles</option>
+							</select>
+						</h5>
+					</li>
+
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3"> Relative velocity : {{selectedVelocity | number}}
+							<select (change)="selectVelocity($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1" >Km/h</option>
+								<option value="2"  >Km/s</option>
+								<option value="3">miles/h</option>
+							</select>
+						</h5>
+						<!-- ########################################## -->
+						<!-- voir plus d'info sur la vélocité  -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+								<i class="fas fa-info-circle"></i> 
+								see more information:
+								<input type="checkbox"#checkBoxVelocity="ngModel" 
+									[(ngModel)]="explanationVelocity" name="checkBoxVelocity">
+							</p> 
+								
+						</form>
+						<p *ngIf="explanationVelocity" class="info"> 
+							<span class="font-weight-bold">VELOCITY :</span>
+								velocity is simply <span class="font-weight-bold">the speed </span>of the asteroid
+						</p>
+					</li>
+					<!-- ########################################## -->
+					<!-- definition orbite de l'asteroide -->
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3">
+							Orbit body : {{ details.orbiting_body }}
+						</h5>
+						<form #myForm='ngForm'>
+						<p class="info">
+							<i class="fas fa-info-circle"></i>
+							see more information:
+							<input type="checkbox" #checkBoxOrbit="ngModel" [(ngModel)]="explanationOrbit" name="checkBoxOrbit">
+						</p>
+
+						</form>
+						<div *ngIf="explanationOrbit" class="info">
+						<p>
+							<span class="font-weight-bold">ORBIT :</span>In astronomy,
+							the orbit refers to <span class="font-weight-bold">the closed trajectory followed</span>
+							by a celestial body
+							around another celestial body
+							<span class="font-weight-bold"> on a periodic basis.</span>
+						</p>
+						<p>
+							<span class="font-weight-bold">BODY or CELESTIAL BODY :</span>
+							designate <span class="font-weight-bold">any object in the universe.</span>
+						</p>
+						</div>
+					</li>
+
+					<li class="list-group-item feature">
+						<h5 class="dropdown mb-3"> Miss Distance : {{ selectedMissDistance | number}}
+							<select (change)="selectMissDistance($event)"
+								class="btn btn-secondary dropdown-toggle">
+								<option value="1">km</option>
+								<option value="2">miles</option>
+								<option value="3">astronomical</option>
+								<option value="4">lunar</option>
+							</select>
+						</h5>
+						<!-- ########################################## -->
+						<!-- definition des termes et des unité de mesure -->
+						<form #myForm='ngForm'>     
+							<p class="info">
+							<i class="fas fa-info-circle"></i> 
+							see more information: 
+							<input type="checkbox"#checkBoxDist="ngModel" 
+								[(ngModel)]="explanationMissDistance" name="checkBoxDist">
+						</p> 
+							
+						</form>
+						<div *ngIf="explanationMissDistance" class="info"> 
+							<p>
+								<span class="font-weight-bold">Miss Distance : </span>
+								It's just the distance <SPan class="font-weight-bold">between Asteroid and Earth.</SPan>	
+							</p>
+							<p>
+								<span class="font-weight-bold">ASTRONOMICAL :</span> The astronomical unit,
+								it corresponds approximately to the 
+								<SPan class="font-weight-bold">distance between the Earth and the Sun</SPan> 
+								is approximately 150 million kilometers
+							</p>
+							<p>
+								<span class="font-weight-bold">LUNAR :</span>In astronomy,
+								the lunar distance is <SPan class="font-weight-bold">
+									the average distance between the Earth and the Moon,
+								</SPan> which is 381 500 km. 
+								The actual distance varies according to the position of the Moon in its orbit,
+									between 356 700 km perigee and 406 300 km at the apogee
+							</p>
+						</div>
+				</ul>
+        	</div>
+      	</div>
+    </div>
+
+  </div>
+</div> 

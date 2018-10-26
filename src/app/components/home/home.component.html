@@ -1,0 +1,45 @@
+<div class="container-fluid bg-darkblue jumbotron">
+
+
+    <div class="container-fluid">
+      	<div class="row justify-content-center">
+        	<div class="col-12">
+            	<h1 class="title text-center">
+           	 		<img  class="logo-home" src="src/assets/img/mdp-space-logo.png" alt="mdp.space">
+            	</h1>
+        	</div>
+        </div>
+	</div>
+  
+  
+  
+    <div class="container-fluid">
+      	<div class="row justify-content-center">
+      <p class="col-9 description text-white text-center font-weight-bold">
+			  How long before an asteroid strikes us ?
+			</p>
+			<p class="col-9 description text-white text-justify">
+        We are not aware but during this last 24 hours, <span class="font-weight-bold">{{ elementCount }} asteroids </span> travelled close to the Earth !
+        Don't worry, most of them will not collide with our beloved planet because we are speaking about 50 millions kilometers.
+      </p>
+      <p class="text-white font-weight-bold mb-2">
+        Click on the button below to know the number of Asteroids who visited us.
+      </p>
+		  </div>
+		  
+      	<div class="row justify-content-center">
+        	<div class="col-6">
+          		<a routerLink="forms" id="viewmore"  (click)="getFormsDate()"
+          			class="btn btn-lg bg-purple text-white btn-block {{hiddeenClass}}">
+              		<span> Let's start</span>
+          		</a>
+        	</div>
+      	</div>
+	</div>
+	
+</div>
+
+  
+  
+  
+

@@ -1,0 +1,61 @@
+<div *ngIf="!card" class="mt-5 ">
+   <!-- ########################################## 
+		Une animation de chargement se lance lorque la requete des asteroid
+		n'est pas encore fini
+		########################################## -->
+		<div *ngIf= "loading">
+			<h5>loading...</h5>
+			<div class="loading">
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+				<div class="obj"></div>
+			</div>
+		</div>
+		  <!-- ########################################## 
+		C'est seulement quand on a reçu toute les donnée à afficher que le chargement s'arrete
+		########################################## -->
+		<div  *ngIf= "!loading"  class="container py-5 mt-5 bg-transparent rounded">
+			<div class="row justify-content-center">
+				<div class="col-8 p-3 allastero">
+					<p class="text-white text-justify">
+					Congratulations, we found a total of <span class="font-weight-bold">{{ arrayInfos.length }} asteroids</span> that	approached the Earth <span class="font-weight-bold">between {{ startDate }} and {{ endDate }}</span> !
+					</p>
+					<p class="text-white text-center">
+						<span class="font-weight-bold"> Click on the name of an asteroid to see its details.</span>
+					</p>
+				</div>
+			</div>
+		</div>
+ 
+  	<!--  Affichage des résultats  -->
+ 	 <div class="container-fluid text-white py-5 my-5">
+    	<div class="row justify-content-center">
+      	<!-- Pour chaque item du tableau arrayInfos -->
+			  <div *ngFor="let item of arrayInfos; let i=index" 
+			  	class="col-12 col-md-6 col-lg-4 col-xl-4">
+					<figure class="circle"></figure>
+        <button (click)=getCard(item) class="btn btn-info" target="_blank">
+					Asteroid Name : {{ item.name | nameFormat }}
+        </button>
+      </div>
+    </div>
+	</div>
+	
+</div>
+
+<!-- Si card vaut true, on affiche les détails -->
+<div *ngIf="card" class="container bg-sky-stars">
+    <div class="row">
+	<!-- Composant AsteroidDetailComponent -->
+		<div class="col-12 mr-auto">
+			<asteroid-detail [startDate]=startDate [endDate]=endDate 
+						[link]=shareLink #detailsBinding>
+			</asteroid-detail>
+		</div>
+    </div>
+</div>

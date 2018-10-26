@@ -1,0 +1,9 @@
+/* Links color */
+
+a {
+    color: #686868;
+}
+
+a:hover {
+    color: #aaaaaa;
+}
