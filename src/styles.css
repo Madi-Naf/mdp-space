@@ -80,3 +80,13 @@ rgba(22, 20, 63, 1)
   background-color: rgba(16, 10, 40, 1) !important;
   font-size: 1.45em;
 }
+/*  class de visibité*/
+.visibility-hidden{
+  visibility: hidden;
+}
+.visibility-visible{
+  visibility: visible;
+}
+.checkbox-info{
+  font-size: 1em;
+}
