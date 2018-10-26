@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pt-5">
 	<div class="row">
     	<h2 class="text-white">Asteroid ID card</h2> 
   	</div>
@@ -102,13 +102,13 @@
 
 					<li class="list-group-item feature">
 						<h5 class="dropdown mb-3">
-							Orbit body :
+							Orbit body : {{ details.orbiting_body }}
 						</h5>
 					</li>
 
 					<li class="list-group-item feature">
-						<h5 class="dropdown mb-3"> Miss Distance : {{selectedMissDistance | number}}
-							<select (change)="slectMissDistance($event)"
+						<h5 class="dropdown mb-3"> Miss Distance : {{ selectedMissDistance | number}}
+							<select (change)="selectMissDistance($event)"
 								class="btn btn-secondary dropdown-toggle">
 								<option value="1">km</option>
 								<option value="2">miles</option>
@@ -116,6 +116,7 @@
 								<option value="4">lunar</option>
 							</select>
 						</h5>
+<<<<<<< HEAD
 						<!-- ########################################## -->
 						<!-- definition des termes et des unité de mesure -->
 						<form #myForm='ngForm'>     
@@ -147,6 +148,9 @@
 									between 356 700 km perigee and 406 300 km at the apogee
 							</p>
 						</div>
+=======
+						<p class="font-italic"><fa name="fas fa-info-circle"></fa> help: </p>
+>>>>>>> developement
 					</li>
 				</ul>
         	</div>

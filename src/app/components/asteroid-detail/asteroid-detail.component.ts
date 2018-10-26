@@ -21,8 +21,7 @@ export class AsteroidDetailComponent implements OnInit {
 	public selectedDiamMin: number;
 	public selectedDiamMax: number;
 	public selectedVelocity: string;
-	public selectedMissDistance: string;
-	
+	public selectedMissDistance: string;	
 
 	public arrayCloseDates = new Array();
 	public details: Details;
@@ -90,6 +89,7 @@ export class AsteroidDetailComponent implements OnInit {
 				this.selectedDiamMin  = this.details.diameter_kilometers_min;
 				this.selectedDiamMax  = this.details.diameter_kilometers_max;
 				this.selectedVelocity =  this.details.velocity_kilometers_hour;
+				this.selectedMissDistance = this.details.miss_kilometers;
 			
 			//	Mise en valeur de la dangereusité d'un asteroid
 				if(this.details.hazardous){
