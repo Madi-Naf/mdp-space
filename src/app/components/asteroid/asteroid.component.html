@@ -19,7 +19,7 @@
 		  <!-- ########################################## 
 		C'est seulement quand on a reçu toute les donnée à afficher que le chargement s'arrete
 		########################################## -->
-		<div  *ngIf= "!loading"  class="container mt-5 bg-transparent rounded">
+		<div  *ngIf= "!loading"  class="container py-5 mt-5 bg-transparent rounded">
 			<div class="row justify-content-center">
 				<div class="col-8 p-3 allastero">
 					<p class="text-white text-justify">
@@ -33,7 +33,7 @@
 		</div>
  
   	<!--  Affichage des résultats  -->
- 	 <div class="container-fluid text-white">
+ 	 <div class="container-fluid text-white py-5 my-5">
     	<div class="row justify-content-center">
       	<!-- Pour chaque item du tableau arrayInfos -->
 			  <div *ngFor="let item of arrayInfos; let i=index" 
