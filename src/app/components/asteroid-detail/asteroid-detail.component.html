@@ -42,7 +42,7 @@
 							</p> 
 								
 						</form>
-						<p *ngIf="showDescription" class="info"> 
+						<p class="info"> 
 							this description comes directly from the NASA API
 						</p>
 					</li>
@@ -94,7 +94,7 @@
 							</p> 
 								
 						</form>
-						<p *ngIf="explanationVelocity" class="info"> 
+						<p class="info"> 
 							<span class="font-weight-bold">VELOCITY :</span>
 								velocity is simply <span class="font-weight-bold">the speed </span>of the asteroid
 						</p>
@@ -109,11 +109,11 @@
 						<p class="info">
 							<i class="fas fa-info-circle"></i>
 							see more information:
-							<input type="checkbox" #checkBoxOrbit="ngModel" [(ngModel)]="explanationOrbit" name="checkBoxOrbit">
+							<input type="checkbox" name="checkBoxOrbit">
 						</p>
 
 						</form>
-						<div *ngIf="explanationOrbit" class="info">
+						<div class="info">
 						<p>
 							<span class="font-weight-bold">ORBIT :</span>In astronomy,
 							the orbit refers to <span class="font-weight-bold">the closed trajectory followed</span>
@@ -144,12 +144,11 @@
 							<p class="info">
 							<i class="fas fa-info-circle"></i> 
 							see more information: 
-							<input type="checkbox"#checkBoxDist="ngModel" 
-								[(ngModel)]="explanationMissDistance" name="checkBoxDist">
+							<input type="checkbox" name="checkBoxDist">
 						</p> 
 							
 						</form>
-						<div *ngIf="explanationMissDistance" class="info"> 
+						<div class="info"> 
 							<p>
 								<span class="font-weight-bold">Miss Distance : </span>
 								It's just the distance <SPan class="font-weight-bold">between Asteroid and Earth.</SPan>	
