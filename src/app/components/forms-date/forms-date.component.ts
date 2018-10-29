@@ -12,7 +12,7 @@ export class FormsDateComponent implements OnInit {
   public endDate = '2018-09-15';
   
 
-  private seeAsteroid: boolean = false;
+  public seeAsteroid: boolean = false;
 
   constructor() { }
 
