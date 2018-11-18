@@ -17,7 +17,7 @@ sur votre terminal et aller sur le lien suivant : `http://localhost:4200/`.
 
 
 ## Les consignes de ce projet  
-Premierement faire un site web, sur le theme de l'espace en utilisant l'API de la NASA.
+Faire un site web sur le theme de l'espace, en utilisant l'API de la NASA.
 Pour crée notre site nous devions utilisé Angular.
 
 ## A quoi consiste notre site web ? 
